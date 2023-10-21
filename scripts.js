@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("posts-box").style.filter = "blur(0px)";
   }
 
-  //handler for the post click
-  //if empty don't post and poses an alert
+  //handler for the post click if empty don't post and poses an alert
+  //then clears the entries for the next post
   function handlePostClick(buttonName) {
     let postTitle = document.getElementById("title").value.trim();
     let postContent = document.getElementById("content").value.trim();
@@ -35,27 +35,32 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("posts-box").style.filter = "blur(3px)";
   }
 
+  function handleLogOut() {
+    document.getElementById("logout-box").style.zIndex = "1";
+    document.getElementById("posts-box").style.filter = "blur(3px)";
+  }
+
   //handles search functionality using the firebase
   //edit this later depending on what's in the firebase and how things are organized
-  function handleSearchPosts(keyword) {
-    var postsRef = firebase.database().ref("posts");
+  // function handleSearchPosts(keyword) {
+  //   var postsRef = firebase.database().ref("posts");
 
-    postsRef
-      .orderByChild("title")
-      .equalTo(keyword)
-      .once("value")
-      .then(function (snapshot) {
-        // Handle search results
-        snapshot.forEach(function (childSnapshot) {
-          var postData = childSnapshot.val();
-          console.log("Title: " + postData.title);
-          console.log("Content: " + postData.content);
-        });
-      })
-      .catch(function (error) {
-        console.error("Error searching posts: " + error);
-      });
-  }
+  // postsRef
+  //   .orderByChild("title")
+  //   .equalTo(keyword)
+  //   .once("value")
+  //   .then(function (snapshot) {
+  //     // Handle search results
+  //     snapshot.forEach(function (childSnapshot) {
+  //       var postData = childSnapshot.val();
+  //       console.log("Title: " + postData.title);
+  //       console.log("Content: " + postData.content);
+  //     });
+  //   })
+  //   .catch(function (error) {
+  //     console.error("Error searching posts: " + error);
+  //   });
+  //}
 
   //adds listeners to the buttons
   var cancelButton = document.getElementById("cancel-btn");
@@ -78,13 +83,18 @@ document.addEventListener("DOMContentLoaded", function () {
     handleSearchPosts(document.getElementById("search-txt").value);
   });
 
+  var logOutButton = document.getElementById("logout-btn");
+  logOutButton.addEventListener("click", function (event) {
+    handleLogOut(logOutButton);
+  });
+
   //accesses firebase for the given email and password
   // for the posts
-  firebase
-    .auth()
-    .signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // User is signed in, you can now access the database
-      var user = userCredential.user;
-    });
+  // firebase
+  //   .auth()
+  //   .signInWithEmailAndPassword(email, password)
+  //   .then((userCredential) => {
+  //     // User is signed in, you can now access the database
+  //     var user = userCredential.user;
+  //   });
 });
