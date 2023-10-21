@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //handler for cancelling a post
+  //handler for cancelling a post by clearing the previous text
   function handleCancelClick(buttonName) {
-    var post = document.getElementById("postPopup");
-    post.style.display = "block";
+    document.getElementById("title").value = " ";
+    document.getElementById("content").value = " ";
+    document.getElementById("draft-box").style.zIndex = "-1";
   }
 
   //handler for the post click
@@ -17,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       ${oldContent}
   `;
+    document.getElementById("draft-box").style.zIndex = "-1";
+    document.getElementById("posts-box").style.filter = "blur(0px)";
   }
 
   function draftPost() {
@@ -25,12 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //adds listeners to the buttons
-  var cancelButton = this.getElementById("cancel-btn");
+  var cancelButton = document.getElementById("cancel-btn");
   cancelButton.addEventListener("click", function (event) {
     handleCancelClick(cancelButton);
   });
 
-  var postButton = this.getElementById("post-btn");
+  var postButton = document.getElementById("post-btn");
   postButton.addEventListener("click", function (event) {
     handlePostClick(postButton);
   });
