@@ -117,7 +117,24 @@ body{
     flex-direction: column;
 }
 
-#draft-box{
+
+#logout-box button{
+    padding: 0 10px;
+    margin: 0 5px;
+    border: solid 2px rgb(160, 26, 26);
+    border-radius: 40px;
+    background-color: #ffffff;
+    color: rgb(160, 26, 26);
+    font-size: calc(10px + 1vw);
+}
+
+#logout-box button:hover {
+    background-color:rgb(160, 26, 26);
+    color: white;
+    transition: 0.3s;
+}
+
+#draft-box, #logout-box{
     position: absolute;
     border: solid 4px rgb(160, 26, 26);
     background-color: white;
