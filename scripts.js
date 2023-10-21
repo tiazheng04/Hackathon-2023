@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let postTitle = document.getElementById("title").value.trim();
     let postContent = document.getElementById("content").value.trim();
     let oldContent = document.getElementById("posts-box").innerHTML;
-    if (postTitle != " " && postContent != " ") {
+    if (postTitle != "" && postContent != "") {
       document.getElementById("posts-box").innerHTML = `
           <div class="post">
               <h2 id="post-title">${postTitle}</h2>
