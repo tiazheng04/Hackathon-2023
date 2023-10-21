@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   //connects this js file to the firebase database
-  firebaseOperation();
+  //firebaseOperation();
 
   //handler for cancelling a post by clearing the previous text
   function handleCancelClick(buttonName) {
@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       alert("Please write in both text boxes");
     }
-    document.getElementById("draft-box").style.zIndex = "-1";
-    document.getElementById("posts-box").style.filter = "blur(0px)";
+    handleCancelClick("post-btn");
   }
 
   function handleDraftClick() {
