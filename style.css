@@ -8,10 +8,10 @@ html {
     right:0;
     top: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     border-bottom: 3px black solid;
-    text-align: center;
-    justify-content: center;
     background-color: #212227;
 }
 
@@ -19,10 +19,19 @@ html {
     color: white;
 }
 
+#topbar p {
+  color: white;
+  margin: 0;
+}
+
+#UserEmail {
+  height: fit-content;
+}
+
 form {
     width: 75%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
