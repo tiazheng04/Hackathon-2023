@@ -1,4 +1,20 @@
-import { ref, push, set, database, onValue } from "./firebase.js";
+// let loginBtn = document.getElementById("loginBtn");
+// let userEmail = ""
+// let displayForum = false;
+
+// loginBtn.onclick = (event) => {
+//   event.preventDefault();
+//   let userEmailInput = document.getElementById("UserEmail");
+//   userEmail = userEmailInput.value;
+//   console.log(userEmail)
+//   if (userEmail.includes("bu.edu")) {
+//     displayForum = true;
+
+//   }
+//   console.log(displayForum)
+// }
+
+import { ref, push, database, onValue } from "./firebase.js";
 
 // get elements from index.html
 let userInputTitle = document.getElementById("itemTitle");
@@ -10,38 +26,40 @@ let itemsContainer = document.getElementById("itemsContainer");
 let itemsRef = ref(database, "items");
 
 // Function to display items in reverse order, newer posts are on top
-function displayItemsReversed(data) {
-  itemsContainer.innerHTML = "";
-  console.log(data);
-  const keys = Object.keys(data).reverse();
-  for (let key of keys) {
-    let item = data[key];
+function displayItemsReversed(data,displayForum) {
+  if (displayForum) {
+    itemsContainer.innerHTML = "";
+    console.log(data);
+    const keys = Object.keys(data).reverse();
+    for (let key of keys) {
+      let item = data[key];
 
-    let newDiv = document.createElement("div");
-    newDiv.innerHTML = `
-      <h1>${item.title}</h1>
-      <p>${item.text}</p>
-      <input type="text" id="commentInput${key}" placeholder="Add Comment">
-      <button id="commentBtn${key}">Submit Comment</button>
-      <div id="commentsContainer${key}"></div>
-    `;
+      let newDiv = document.createElement("div");
+      newDiv.innerHTML = `
+        <h1>${item.title}</h1>
+        <p>${item.text}</p>
+        <input type="text" id="commentInput${key}" placeholder="Add Comment">
+        <button id="commentBtn${key}">Submit Comment</button>
+        <div id="commentsContainer${key}"></div>
+      `;
 
-    itemsContainer.append(newDiv);
+      itemsContainer.append(newDiv);
 
-    // Add a click event listener to the comment button
-    const commentBtn = document.getElementById(`commentBtn${key}`);
-    commentBtn.addEventListener("click", () => {
-      addComment(key);
-    });
+      // Add a click event listener to the comment button
+      const commentBtn = document.getElementById(`commentBtn${key}`);
+      commentBtn.addEventListener("click", () => {
+        addComment(key);
+      });
 
-    // Display comments if available
-    const commentsContainer = document.getElementById(`commentsContainer${key}`);
-    if (item.comments) {
-      for (let commentKey in item.comments) {
-        const comment = item.comments[commentKey];
-        const commentDiv = document.createElement("div");
-        commentDiv.innerText = comment.text;
-        commentsContainer.appendChild(commentDiv);
+      // Display comments if available
+      const commentsContainer = document.getElementById(`commentsContainer${key}`);
+      if (item.comments) {
+        for (let commentKey in item.comments) {
+          const comment = item.comments[commentKey];
+          const commentDiv = document.createElement("div");
+          commentDiv.innerText = comment.text;
+          commentsContainer.appendChild(commentDiv);
+        }
       }
     }
   }
