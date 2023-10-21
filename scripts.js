@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //handler for the post click
   function handlePostClick(buttonName) {
     var postUser = document.getElementById("User").value;
-    var title = doctument.getElementById("title").value;
+    var title = document.getElementById("title").value;
     var postContent = document.getElementById("content").value;
 
     var postElement = document.createElement("div");
@@ -31,6 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
   postButton.addEventListener("click", function (event) {
     handlePostClick(postButton);
   });
+
+  //accesses firebase for the given email and password
+
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // User is signed in, you can now access the database
+      var user = userCredential.user;
+    });
 });
 
 
