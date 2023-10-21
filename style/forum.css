@@ -1,0 +1,63 @@
+
+#draft-box{
+    position: absolute;
+    background-color: red;
+    padding: 2vh 2vw;
+    z-index: -1;
+    margin-left: 38%;
+    margin-right: 50%;
+}
+
+#draft-btn{
+    padding: 10px 30px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: green;
+}
+
+#user-options{
+    background-color: purple;
+    padding: 3vh 3vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#user-options #search-box,#draft-btn{
+    margin: 0 auto;
+}
+
+#search-box{
+    padding: 5%;
+}
+
+#search-txt{
+    padding: 10px;
+    font-size: calc(12px + 1vw);
+}
+
+#search-btn{
+    padding: 10px;
+    font-size: calc(12px + 1vw);
+}
+
+footer{
+    background-color: blue;
+}
+
+#posts-box{
+    background-color: yellow;
+    padding: 10vh 10vw;
+}

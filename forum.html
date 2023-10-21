@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="forum.css">
+        <link type="text/css" rel="stylesheet" href="../style/forum.css">
         <title>Document</title>
     </head>
 
@@ -23,9 +23,11 @@
 
         <main>
             <div id="user-options">
-                <input type="text" placeholder="Tell me about...">
-                <button type="submit">Go</button>
-                <button onclick="draftPost()">Create a post</button>
+                <div id="search-box">
+                    <input id="search-txt" type="text" placeholder="Tell me about...">
+                    <button id="search-btn" type="submit">Go</button>
+                </div>
+                <button id="draft-btn" onclick="draftPost()">Create a post</button>
             </div>
 
             <div id="draft-box">
@@ -47,7 +49,7 @@
             <p>All Rights Reserved</p>
         </footer>
 
-        <script>
+        <script src="check-age.js">
             function createPost(){
                 let postTitle = document.getElementById("title").value;
                 let postContent = document.getElementById("content").value;
