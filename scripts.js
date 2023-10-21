@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("posts-box").style.filter = "blur(0px)";
   }
 
-  function draftPost() {
+  function handleDraftClick() {
     document.getElementById("draft-box").style.zIndex = "1";
     document.getElementById("posts-box").style.filter = "blur(3px)";
   }
@@ -38,13 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
     handlePostClick(postButton);
   });
 
+  var draftButton = document.getElementById("draft-btn");
+  draftButton.addEventListener("click", function (event) {
+    handleDraftClick(draftButton);
+  });
+
   //accesses firebase for the given email and password
 
-  firebase
-    .auth()
-    .signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // User is signed in, you can now access the database
-      var user = userCredential.user;
-    });
+  // firebase
+  //   .auth()
+  //   .signInWithEmailAndPassword(email, password)
+  //   .then((userCredential) => {
+  //     // User is signed in, you can now access the database
+  //     var user = userCredential.user;
+  //   });
 });
