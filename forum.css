@@ -1,0 +1,39 @@
+
+#draft-box{
+    position: absolute;
+    background-color: red;
+    padding: 2vh 2vw;
+    z-index: -1;
+    margin-left: 38%;
+    margin-right: 50%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: green;
+}
+
+#user-options{
+    background-color: purple;
+    padding: 3vh 3vw;
+}
+
+footer{
+    background-color: blue;
+}
+
+#posts-box{
+    background-color: yellow;
+    padding: 10vh 10vw;
+}
