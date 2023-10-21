@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handlePostClick(buttonName) {
       var postUser = document.getElementById("User").value;
-      var title = doctument.getElementById("title").value;
+      var title = document.getElementById("title").value;
       var postContent = document.getElementById("content").value;
 
       var postElement = document.createElement("div");
