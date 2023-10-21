@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="../style/forum.css">
-        <title>Document</title>
+        <title>Forum | BU Board</title>
     </head>
 
     <body>
         <header>
-            <h1 id="website-name">Website Name</h1>
+            <h1 id="website-name">BU Board</h1>
             <button id="log-out-btn"><p>Log out</p></button>
         </header>
 
@@ -50,9 +50,21 @@
                     <div class="tags">
                         <button>Registration</button>
                     </div>
-                    <p>Hey guys I'm a senior and here are some of my recommendations for
-                        classes to take next semester. These were some of my favorites so I hope
-                        this helps some of you!
+                    <p>Hi everyone I'm a senior and a lot of my underclassmen friends have been 
+                        asking so here are some of my recommendations for some cool classes to take next semester. 
+                        These were some of my favorites so I hope this helps some of you! Good luck!
+                    </p>
+                </div>
+                <div class="post">
+                    <h2>Upcoming Hackathon</h2>
+                    <div class="tags">
+                        <button>Events</button>
+                    </div>
+                    <p>Hey guys if anyone is interested there's a hackathon coming up soon.
+                        This is a great opportunity to get some practice applying the skills
+                        you've learned in class so if you're interested here are the details:
+                        <ul><li>Location: CDS</li><li>Date: 10/29</li><li>Time: 12PM-9PM</li>
+                            <li>All levels of experience welcome!</li></ul>
                     </p>
                 </div>
             </div>
@@ -77,10 +89,12 @@
                     ${oldContent}
                 `;
                 document.getElementById("draft-box").style.zIndex = "-1";
+                document.getElementById("posts-box").style.filter = "blur(0px)";
             }
 
             function draftPost(){
                 document.getElementById("draft-box").style.zIndex = "1";
+                document.getElementById("posts-box").style.filter = "blur(3px)";
             }
         </script> 
     </body>

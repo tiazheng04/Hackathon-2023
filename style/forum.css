@@ -119,7 +119,7 @@ body{
 
 #draft-box{
     position: absolute;
-    border: dashed 4px rgb(160, 26, 26);
+    border: solid 4px rgb(160, 26, 26);
     background-color: white;
     padding: 2vh 2vw;
     z-index: -1;
@@ -160,7 +160,8 @@ body{
 }
 
 #posts-box{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    filter: blur(0px);
     padding: 1vh 5vw;
 }
 
@@ -175,14 +176,16 @@ body{
     margin-bottom: 1vh;
 }
 
-.post p{
+.post p,li{
     font-size: calc(8px + 1vw);
+    list-style: none;
 }
 
 .tags{
     display: flex;
     flex-direction: row;
     margin: 1vh 1vw 1vh 0;
+    font-size: calc(8px + 1vw);
 }
 
 .tags button{
