@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("posts-box").style.filter = "blur(0px)";
   }
 
+  function signOutCancel(buttonName) {
+    document.getElementById("logout-box").style.zIndex = "-1";
+    document.getElementById("posts-box").style.filter = "blur(0px)";
+  }
+
   //handler for the post click if empty don't post and poses an alert
   //then clears the entries for the next post
   function handlePostClick(buttonName) {
@@ -72,6 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
     handleCancelClick(cancelButton);
   });
 
+  const signOutCancelButton = document.getElementById("cancelBtn");
+  signOutCancelButton.addEventListener("click", function (event) {
+    signOutCancel(signOutCancelButton);
+  });
+
   const postButton = document.getElementById("post-btn");
   postButton.addEventListener("click", function (event) {
     handlePostClick(postButton);
@@ -89,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const logOutButton = document.getElementById("log-out-btn");
   logOutButton.addEventListener("click", function (event) {
-    handleLogOutPopOut(logOutButton);
+    handleLogOutPopup(logOutButton);
   });
 
   const signOutButton = document.getElementById("logout-btn");
