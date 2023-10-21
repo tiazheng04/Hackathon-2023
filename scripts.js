@@ -5,19 +5,21 @@ document.addEventListener('DOMContentLoaded', function () {
         post.style.display = "block";
     }
 
-    function handlePostClick(buttonName) {  
-        var postUser = document.getElementById("User").value;
-        var postContent = document.getElementById("content").value;
+    function handlePostClick(buttonName) {
+      var postUser = document.getElementById("User").value;
+      var title = doctument.getElementById("title").value;
+      var postContent = document.getElementById("content").value;
 
-        var postElement = document.createElement("div");
-        postElement.className = "post";
-        postElement.innerHTML = "<h3>" + postTitle + "</h3><p>" + postContent + "</p>";
+      var postElement = document.createElement("div");
+      postElement.className = "posts-box";
+      postElement.innerHTML =
+        "<h3>" + postTitle + "</h3><p>" + postContent + "</p>";
 
-        document.getElementById("posts").appendChild(postElement);
+      document.getElementById("posts").appendChild(postElement);
 
-        closePopup();
+      closePopup();
     }
-    
+
 
     var cancelButton = this.getElementById("id of the button");
     cancelButton.addEventListener('click', function(event) {handleCancelClick("cancelButton")});
