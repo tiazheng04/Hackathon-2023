@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //handler for the post click if empty don't post and poses an alert
   //then clears the entries for the next post
   function handlePostClick(buttonName) {
-    let postTitle = document.getElementById("title").value.trim();
-    let postContent = document.getElementById("content").value.trim();
-    let oldContent = document.getElementById("posts-box").innerHTML;
+    const postTitle = document.getElementById("title").value.trim();
+    const postContent = document.getElementById("content").value.trim();
+    const oldContent = document.getElementById("posts-box").innerHTML;
     if (postTitle != "" && postContent != "") {
       document.getElementById("posts-box").innerHTML = `
           <div class="post">
@@ -35,9 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("posts-box").style.filter = "blur(3px)";
   }
 
-  function handleLogOut() {
+  function handleLogOutPopup() {
     document.getElementById("logout-box").style.zIndex = "1";
     document.getElementById("posts-box").style.filter = "blur(3px)";
+  }
+
+  function handleLogOut() {
+    window.location.href = "home.html";
   }
 
   //handles search functionality using the firebase
@@ -63,29 +67,34 @@ document.addEventListener("DOMContentLoaded", function () {
   //}
 
   //adds listeners to the buttons
-  var cancelButton = document.getElementById("cancel-btn");
+  const cancelButton = document.getElementById("cancel-btn");
   cancelButton.addEventListener("click", function (event) {
     handleCancelClick(cancelButton);
   });
 
-  var postButton = document.getElementById("post-btn");
+  const postButton = document.getElementById("post-btn");
   postButton.addEventListener("click", function (event) {
     handlePostClick(postButton);
   });
 
-  var draftButton = document.getElementById("draft-btn");
+  const draftButton = document.getElementById("draft-btn");
   draftButton.addEventListener("click", function (event) {
     handleDraftClick(draftButton);
   });
 
-  var searchButton = document.getElementById("search-btn");
+  const searchButton = document.getElementById("search-btn");
   searchButton.addEventListener("click", function (event) {
     handleSearchPosts(document.getElementById("search-txt").value);
   });
 
-  var logOutButton = document.getElementById("logout-btn");
+  const logOutButton = document.getElementById("log-out-btn");
   logOutButton.addEventListener("click", function (event) {
-    handleLogOut(logOutButton);
+    handleLogOutPopOut(logOutButton);
+  });
+
+  const signOutButton = document.getElementById("logout-btn");
+  signOutButton.addEventListener("click", function (event) {
+    handleLogOut(signOutButton);
   });
 
   //accesses firebase for the given email and password
