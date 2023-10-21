@@ -27,7 +27,6 @@ let itemsRef = ref(database, "items");
 
 // Function to display items in reverse order, newer posts are on top
 function displayItemsReversed(data,displayForum) {
-  if (displayForum) {
     itemsContainer.innerHTML = "";
     console.log(data);
     const keys = Object.keys(data).reverse();
@@ -62,7 +61,6 @@ function displayItemsReversed(data,displayForum) {
         }
       }
     }
-  }
 }
 
 
