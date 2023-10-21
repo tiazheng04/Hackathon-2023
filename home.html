@@ -15,6 +15,7 @@
     </header>
     <div class="sign-in-box">
         <button type= "button" id="sign-in" href="#">Login</button>
+        <button type="button" id="sign-up" href="#">Sign up</button>
     </div>
     </div>
             <div id="sign-in-window">
@@ -22,7 +23,7 @@
                 <form action="">
                     <div class="form-container">
                         <label for="email"><b>Username</b></label>
-                        <input type="text" name="email" placeholder="Enter BU email">
+                        <input id="userEmail"type="text" name="email" placeholder="Enter BU email">
                         <label for="pword"><b>Password</b></label>
                         <input type="text" name="pword" placeholder="Enter Password">
                         <button type="submit" id="login" href="#">Login</button>
@@ -30,6 +31,20 @@
                 </form>
                 <button id="close-button">x</button>
               </div>  
+              <div id="sign-up-window">
+                <h1>Sign up BU Credentials</h1>
+                <form action="">
+                    <div class="form-container">
+                        <label for="email"><b>Username</b></label>
+                        <input id="userSignup"type="text" name="email" placeholder="Enter BU email">
+                        <label for="pword"><b>Password</b></label>
+                        <input type="text" name="pword" placeholder="Enter Password">
+                        <button type="submit" id="signup" href="#">Sign up</button>
+                    </div>
+                </form>
+                <button id="close-button2">x</button>
+              </div>  
+
     
         <div class="page">
             <div class="background-img"></div>
@@ -41,6 +56,7 @@
     </div>
 
     <script src="homeJS.js"></script>
+    <script src="main.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed(".description-span", {

@@ -27,15 +27,21 @@ body{
 .sign-in-box{
     background-color: red;
     height: 10vh;
+    width: 30vw;
     display: flex;
-    justify-content: right;
+    justify-content: space-evenly;
     align-items: center;
+    margin-right: 5vw;
 }
 
 #sign-in{
     background-color: blue;
-    margin-right: 5vw;
     padding: 1vh 2vw;
+}
+
+#sign-up{
+  background-color: orange;
+  padding: 1vh 2vw;
 }
 
 .footer{
@@ -44,6 +50,22 @@ body{
 }
 
 #sign-in-window {
+    position: fixed;
+    width: 60vw;
+    height: 50vh;
+    background: white;
+    border: 1px solid black;
+    padding: 3vh;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+  } 
+
+  #sign-up-window {
     position: fixed;
     width: 60vw;
     height: 50vh;
@@ -83,13 +105,26 @@ body{
     margin-top: 2vh;
   }
 
+  #signup{
+    width: 15vw;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+  }
   #close-button{
     border-width: 0;
     font-size: large;
     position: absolute;
     top: 1vh;
     right: 1vw;
-    
+  }
+
+  #close-button2{
+    border-width: 0;
+    font-size: large;
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+
   }
 
   .container{

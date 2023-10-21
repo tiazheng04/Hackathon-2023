@@ -7,11 +7,37 @@
   popupLink.addEventListener("click", function(event) {
     event.preventDefault();
     popupWindow.style.display = "block";
+    anotherWindow.style.display = "none";
   });
   // Hide the pop-up window when the close button is clicked
   closeButton.addEventListener("click", function() {
     popupWindow.style.display = "none";
   });
+
+  var anotherPop = document.getElementById("sign-up");
+  var anotherWindow = document.getElementById("sign-up-window");
+  var closeButton2 = document.getElementById("close-button2");
+  // Show the pop-up window when the link is clicked
+  anotherPop.addEventListener("click", function(event) {
+    event.preventDefault();
+    anotherWindow.style.display = "block";
+    popupWindow.style.display = "none";
+  });
+  // Hide the pop-up window when the close button is clicked
+  closeButton2.addEventListener("click", function() {
+    anotherWindow.style.display = "none";
+  });
+
+  
+
+
+  // if (popupWindow.style.display =="block"){
+  //   anotherWindow.style.display == "none";
+  // }
+
+  // if(anotherWindow.style.display =="block"){
+  //   popupWindow.style.display== "none";
+  // }
 
 //   var text = document.querySelector(".description");
 //   var strText = text.textContent;
