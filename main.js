@@ -9,7 +9,7 @@ let itemsContainer = document.getElementById("itemsContainer");
 // reference a part of our database
 let itemsRef = ref(database, "items");
 
-// Function to display items in reverse order
+// Function to display items in reverse order, newer posts are on top
 function displayItemsReversed(data) {
   itemsContainer.innerHTML = "";
   console.log(data);
@@ -57,6 +57,7 @@ function addComment(itemId) {
   if (commentText) {
     // Create a new element to display the comment
     const newCommentDiv = document.createElement("div");
+    newCommentDiv.id = "commentdiv"
     newCommentDiv.innerText = commentText;
 
     // Append the comment to the comments container
@@ -99,3 +100,5 @@ submitBtn.onclick = (event) => {
   // Generate a new child reference under "items" and set the object as its value
   push(itemsRef, newItemData);
 };
+
+
