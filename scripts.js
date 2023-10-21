@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
         
     function handleCancelClick(buttonName) {
-        var post = document.getElementById("postPopup");
+        var post = document.getElementById("post-box");
         post.style.display = "block";
     }
 
