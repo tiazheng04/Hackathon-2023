@@ -5,6 +5,7 @@
     font-family: Georgia, Times, Times New Roman, serif;
 }
 
+/* header area */
 header{
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -20,20 +21,21 @@ header{
 #log-out-btn{
     margin: 10px;
     padding: 0 10px;
-    border: solid 2px rgb(160, 26, 26);;
+    border: solid 2px rgb(160, 26, 26);
     border-radius: 50px;
     background-color: #ffffff;
     color: rgb(160, 26, 26);
 }
 
 #log-out-btn:hover {
-    background-color:rgb(196, 130, 130);
+    background-color:rgb(160, 26, 26);
     color: white;
     transition: 0.3s;
 }
 
+/* nav area */
 nav{
-    background-color: rgb(196, 130, 130);
+    background-color: rgb(160, 26, 26);
     padding: 10px;
 }
 
@@ -45,62 +47,157 @@ nav ul{
 
 nav a{
     text-decoration: none;
-    padding: 10px;
-    margin: 0 5px;
+    padding: 8px;
+    margin: 0 10px;
+    border: 2px solid rgb(160, 26, 26);
     background-color: rgb(160, 26, 26);
+    color: white;
+    font-size: calc(10px + 1vw);
 }
 
-#draft-box{
-    position: absolute;
-    background-color: red;
-    padding: 2vh 2vw;
-    z-index: -1;
-    margin-left: 38%;
-    margin-right: 50%;
+nav a:hover{
+    background-color: white;
+    color: rgb(160, 26, 26);
+    transition: 0.3s;
 }
 
+/* user-options area */
+#user-options{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 10px;
+}
 
+#search-box{
+    margin: 0 30px;
+}
+
+#search-txt{
+    padding: 10px;
+    font-size: calc(10px + 1vw);
+    border: solid 2px rgb(160, 26, 26);
+    margin-right: 0px;
+}
+
+#search-btn{
+    padding: 10px;
+    border: solid 2px rgb(160, 26, 26);
+    background-color: #ffffff;
+    color: rgb(160, 26, 26);
+    font-size: calc(10px + 1vw);
+}
+
+#search-btn:hover {
+    background-color:rgb(160, 26, 26);
+    color: white;
+    transition: 0.3s;
+}
+
+#draft-btn{
+    margin-left: 30px;
+    padding: 0 10px;
+    border: solid 2px rgb(160, 26, 26);
+    border-radius: 40px;
+    background-color: #ffffff;
+    color: rgb(160, 26, 26);
+    font-size: calc(10px + 1vw);
+}
+
+#draft-btn:hover {
+    background-color:rgb(160, 26, 26);
+    color: white;
+    transition: 0.3s;
+}
+
+/* main area  */
 body{
     display: flex;
     flex-direction: column;
 }
 
-#user-options{
-    background-color: purple;
-    padding: 3vh 3vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#draft-box{
+    position: absolute;
+    border: dashed 4px rgb(160, 26, 26);
+    background-color: white;
+    padding: 2vh 2vw;
+    z-index: -1;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    color:rgb(160, 26, 26);
+    font-size: calc(10px + 1vw);
+    margin: 1vh 0;
 }
 
-#user-options #search-box,#draft-btn{
-    margin: 0 auto;
+#draft-box button{
+    padding: 0 10px;
+    margin: 0 5px;
+    border: solid 2px rgb(160, 26, 26);
+    border-radius: 40px;
+    background-color: #ffffff;
+    color: rgb(160, 26, 26);
+    font-size: calc(10px + 1vw);
 }
 
-#draft-btn{
-    padding: 10px;
-    font-size: calc(12px + 1vw);
+#draft-box button:hover {
+    background-color:rgb(160, 26, 26);
+    color: white;
+    transition: 0.3s;
 }
 
-#search-box{
-    padding: 5%;
+/* make these two scale */
+#title{
+    height: 5vh;
+    width: 70vw;
+    margin: 10px;
 }
-
-#search-txt{
-    padding: 10px;
-    font-size: calc(12px + 1vw);
-}
-
-#search-btn{
-    padding: 10px;
-    font-size: calc(12px + 1vw);
-}
-
-footer{
-    background-color: blue;
+#content{
+    height: 5vh;
+    width: 70vw;
+    margin: 10px;
 }
 
 #posts-box{
-    background-color: yellow;
-    padding: 10vh 10vw;
+    background-color: white;
+    padding: 1vh 5vw;
+}
+
+.post{
+    margin: 5vh 5vw;
+    padding: 1vh 1vw;
+    border: solid 2px rgb(160, 26, 26);
+}
+
+.post #post-title{
+    font-size: calc(10px + 1vw);
+    margin-bottom: 1vh;
+}
+
+.post p{
+    font-size: calc(8px + 1vw);
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    margin: 1vh 1vw 1vh 0;
+}
+
+.tags button{
+    padding: 1vh;
+    border: none;
+    background-color:rgb(160, 26, 26, 0.5);
+}
+
+.tags button:hover{
+    color: white;
+    transition: 0.3s;
+}
+/* footer area  */
+footer{
+    background-color:rgb(160, 26, 26);
+    color: white;
+    padding: 2vh;
 }
