@@ -27,7 +27,7 @@
                     <input id="search-txt" type="text" placeholder="Tell me about...">
                     <button id="search-btn" type="submit">Go</button>
                 </div>
-                <button id="draft-btn">Create a post</button>
+                <button id="draft-btn" onclick="draftPost()">Create a post</button>
             </div>
 
             <div id="logout-box">
@@ -87,5 +87,29 @@
         <script src="scripts.js"></script>
         <script sc="firebase.js"></script>
         <script sc="main.js"></script>
+        <!-- add a requirement to fill both inputs and clear inputs after filling out -->
+        <!-- <script>
+            let allTags = ["Registration","Events","Internships","Jobs","Clubs","Housing",
+                        "CS111","CS112","CS131","CS132","CS210","CS237","CS320","CS330","CS365","CS392","CS411"];
+            function createPost(){
+                let postTitle = document.getElementById("title").value;
+                let postContent = document.getElementById("content").value;
+                let oldContent = document.getElementById("posts-box").innerHTML;
+                document.getElementById("posts-box").innerHTML = `
+                    <div class="post">
+                        <h2 id="post-title">${postTitle}</h2>
+                        <p>${postContent}</p>
+                    </div>
+                    ${oldContent}
+                `;
+                document.getElementById("draft-box").style.zIndex = "-1";
+                document.getElementById("posts-box").style.filter = "blur(0px)";
+            }
+
+            function draftPost(){
+                document.getElementById("draft-box").style.zIndex = "1";
+                document.getElementById("posts-box").style.filter = "blur(3px)";
+            }
+        </script>  -->
     </body>
 </html>
