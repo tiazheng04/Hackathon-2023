@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("title").value = " ";
     document.getElementById("content").value = " ";
     document.getElementById("draft-box").style.zIndex = "-1";
+    document.getElementById("posts-box").style.filter = "blur(0px)";
   }
 
   //handler for the post click

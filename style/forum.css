@@ -148,15 +148,15 @@ body{
 }
 
 /* make these two scale */
-#title{
+#title, #content, #tags{
     height: 5vh;
     width: 70vw;
     margin: 10px;
 }
-#content{
-    height: 5vh;
-    width: 70vw;
-    margin: 10px;
+
+.display-name{
+    margin-top: 7px;
+    color: rgb(132, 48, 48);
 }
 
 #posts-box{
@@ -192,6 +192,7 @@ body{
     padding: 1vh;
     border: none;
     background-color:rgb(160, 26, 26, 0.5);
+    margin: 0 1vw 0 0;
 }
 
 .tags button:hover{
