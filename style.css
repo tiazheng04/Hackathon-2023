@@ -80,10 +80,6 @@ input::placeholder {
   margin: auto;
 }
 
-#itemsContainer div {
-  margin-bottom: 20px;
-}
-
 h1 {
   text-align: center;
 }
@@ -94,10 +90,16 @@ h1 {
 }
 
 #itemsContainer div {
+  margin-bottom: 20px;
   border: 4px solid black;
   border-radius: 25px;
   padding: 10px;
   background-color: #BDD4E7;
+}
+
+#itemsContainer div div {
+  background-color: white;
+  border-radius: 0px;
 }
 
 #itemsContainer p {
