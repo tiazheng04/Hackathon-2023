@@ -21,10 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    var cancelButton = this.getElementById("id of the button");
-    cancelButton.addEventListener('click', function(event) {handleCancelClick("cancelButton")});
+    var cancelButton = this.getElementById("cancel");
+    cancelButton.addEventListener("click", function (event) {
+      handleCancelClick("cancelButton");
+    });
 
-    var postButton = this.getElementById("insert id of the post button");
+    var postButton = this.getElementById("post");
     postButton.addEventListener('click', function(event) {handlePostClick(buttonName)});
 
 
