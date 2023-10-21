@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackHardware</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="topbar">
+        <h1>Welcome</h1>
+    </div>
+    <form>
+      <h1>Make Your Posts!</h1>
+      <p>Enter your title below</p>
+      <input id="itemTitle" type="text" />
+      <p>Enter your content below</p>
+      <input id="itemText" type="text" />
+      <button id="submitBtn">Submit</button>
+    </form>
+    <h1 id="post">New Posts</h1>
+    <ul id="itemsContainer">
+      <!-- Our title items will be here -->
+    </ul>
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
