@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("posts-box").style.filter = "blur(0px)";
   }
 
+  //handler to cancel a sign out
   function signOutCancel(buttonName) {
     document.getElementById("logout-box").style.zIndex = "-1";
     document.getElementById("posts-box").style.filter = "blur(0px)";
@@ -35,16 +36,19 @@ document.addEventListener("DOMContentLoaded", function () {
     handleCancelClick("post-btn");
   }
 
+  //brings the draft post box up
   function handleDraftClick() {
     document.getElementById("draft-box").style.zIndex = "1";
     document.getElementById("posts-box").style.filter = "blur(3px)";
   }
 
+  //brings up the log out popup
   function handleLogOutPopup() {
     document.getElementById("logout-box").style.zIndex = "1";
     document.getElementById("posts-box").style.filter = "blur(3px)";
   }
 
+  //redirects the user to the home page after logging out
   function handleLogOut() {
     window.location.href = "home.html";
   }
@@ -106,14 +110,4 @@ document.addEventListener("DOMContentLoaded", function () {
   signOutButton.addEventListener("click", function (event) {
     handleLogOut(signOutButton);
   });
-
-  //accesses firebase for the given email and password
-  // for the posts
-  // firebase
-  //   .auth()
-  //   .signInWithEmailAndPassword(email, password)
-  //   .then((userCredential) => {
-  //     // User is signed in, you can now access the database
-  //     var user = userCredential.user;
-  //   });
 });
