@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   //handler for cancelling a post
   function handleCancelClick(buttonName) {
     var post = document.getElementById("postPopup");
@@ -7,18 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //handler for the post click
   function handlePostClick(buttonName) {
-    var postUser = document.getElementById("User").value;
-    var title = document.getElementById("title").value;
-    var postContent = document.getElementById("content").value;
+    let postTitle = document.getElementById("title").value;
+    let postContent = document.getElementById("content").value;
+    let oldContent = document.getElementById("posts-box").innerHTML;
+    document.getElementById("posts-box").innerHTML = `
+      <div class="post">
+          <h2 id="post-title">${postTitle}</h2>
+          <p>${postContent}</p>
+      </div>
+      ${oldContent}
+  `;
+  }
 
-    var postElement = document.createElement("div");
-    postElement.className = "posts-box";
-    postElement.innerHTML =
-      "<h3>" + postTitle + "</h3><p>" + postContent + "</p>";
-
-    document.getElementById("posts").appendChild(postElement);
-
-    closePopup();
+  function draftPost() {
+    document.getElementById("draft-box").style.zIndex = "1";
+    document.getElementById("posts-box").style.filter = "blur(3px)";
   }
 
   //adds listeners to the buttons
@@ -42,6 +45,3 @@ document.addEventListener('DOMContentLoaded', function () {
       var user = userCredential.user;
     });
 });
-
-
-
