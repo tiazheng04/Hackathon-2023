@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.page-wrapper{
+    height: 130vh;
+    background-color: orange;
+}
+
+.page{
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+
+.background-img{
+    background-image: url(hackathon-bu.jpg);
+    background-size: cover;
+    height: 80vh;
+}
+
+.sign-in-box{
+    background-color: red;
+    height: 10vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#sign-in{
+    background-color: blue;
+    margin-right: 5vw;
+    padding: 1vh 2vw;
+}
+
+.footer{
+    background-color: red;
+    height: 10vh;
+}
+
+#sign-in-window {
+    position: fixed;
+    width: 60vw;
+    height: 50vh;
+    background: white;
+    border: 1px solid black;
+    padding: 3vh;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+  } 
+
+  .form-container{
+    height: auto;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 4%;
+  }
+
+  input[type=text], input[type=password] {
+    width: 60%;
+    padding: 2vh 4vw;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  #login{
+    width: 10vw;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+  }
+
+  #close-button{
+    border-width: 0;
+    font-size: large;
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    
+  }
+
+  .container{
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title{
+    background-color: yellow;
+    margin-left: 3vw;
+
+  }
+
+  .description{
+    margin-left: 3vw;
+  }
+
+  /* span{
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform-origin: translateY(50px);
+    display: inline-block;
+  }
+
+  span.fade{
+    opacity: 1;
+    transform: translateY(0px);
+  } */
