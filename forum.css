@@ -117,6 +117,7 @@ body{
     flex-direction: column;
 }
 
+/* log out prompt  */
 #logout-box{
     position: absolute;
     border: solid 4px rgb(160, 26, 26);
@@ -148,6 +149,7 @@ body{
     transition: 0.3s;
 }
 
+/* creating a post prompt  */
 #draft-box{
     position: absolute;
     border: solid 4px rgb(160, 26, 26);
@@ -178,6 +180,7 @@ body{
     transition: 0.3s;
 }
 
+/* styling for tags display  */
 #tagsautocomplete-list{
     position: absolute;
     border: solid 4px rgb(160, 26, 26);
@@ -206,17 +209,20 @@ body{
     margin: 10px;
 }
 
+/* styling for display name, not currently implemented  */
 .display-name{
     margin-top: 7px;
     color: rgb(132, 48, 48);
 }
 
+/* where all posts are stored  */
 #posts-box{
     background-color: rgb(255, 255, 255);
     filter: blur(0px);
     padding: 1vh 5vw;
 }
 
+/* specifications for posts  */
 .post{
     margin: 5vh 5vw;
     padding: 2vh 2vw;
@@ -252,6 +258,15 @@ body{
     transition: 0.3s;
 }
 
+
+.post input{
+    padding: 1px;
+    font-size: calc(7px + 1vw);
+    border: solid 1px rgb(160, 26, 26);
+    margin-right: 0px;
+}
+
+/* styling for tags, not currently implemented  */
 .tags{
     display: flex;
     flex-direction: row;
@@ -270,13 +285,6 @@ body{
 .tags button:hover{
     color: white;
     transition: 0.3s;
-}
-
-.post input{
-    padding: 1px;
-    font-size: calc(7px + 1vw);
-    border: solid 1px rgb(160, 26, 26);
-    margin-right: 0px;
 }
 
 /* about us page  */
