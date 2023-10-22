@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="forum.css">
+        <link type="text/css" rel="stylesheet" href="../style/forum.css">
         <title>Forum | BU Board</title>
     </head>
 
@@ -27,7 +27,7 @@
                     <input id="search-txt" type="text" placeholder="Tell me about...">
                     <button id="search-btn" type="submit">Go</button>
                 </div>
-                <button id="draft-btn">Create a post</button>
+                <button id="draft-btn" onclick="draftPost()">Create a post</button>
             </div>
 
             <div id="logout-box">
@@ -49,9 +49,34 @@
             </div>
 
             <div id="posts-box">
-                <ul id="itemsContainer">
-                    <!-- posts will be inserted here -->
-                </ul>
+                <div class="post">
+                    <h2>Spring 2024 Class Recs</h2>
+                    <div class="display-name">
+                        <h5>coolSenior@bu.edu</h5>
+                    </div>
+                    <div class="tags">
+                        <button>Registration</button>
+                    </div>
+                    <p>Hi everyone I'm a senior and a lot of my underclassmen friends have been 
+                        asking so here are some of my recommendations for some cool classes to take next semester. 
+                        These were some of my favorites so I hope this helps some of you! Good luck!
+                    </p>
+                </div>
+                <div class="post">
+                    <h2>Upcoming Hackathon</h2>
+                    <div class="display-name">
+                        <h5>hackerman@bu.edu</h5>
+                    </div>
+                    <div class="tags">
+                        <button>Events</button>
+                    </div>
+                    <p>Hey guys if anyone is interested there's a hackathon coming up soon.
+                        This is a great opportunity to get some practice applying the skills
+                        you've learned in class so if you're interested here are the details:
+                        <ul><li>Location: CDS</li><li>Date: 10/29</li><li>Time: 12PM-9PM</li>
+                            <li>All levels of experience welcome!</li></ul>
+                    </p>
+                </div>
             </div>
         </main>
 
@@ -60,7 +85,31 @@
         </footer>
 
         <script src="scripts.js"></script>
-        <script type="module" src="firebase.js"></script>
-        <script type="module" src="main.js"></script>
+        <script sc="firebase.js"></script>
+        <script sc="main.js"></script>
+        <!-- add a requirement to fill both inputs and clear inputs after filling out -->
+        <!-- <script>
+            let allTags = ["Registration","Events","Internships","Jobs","Clubs","Housing",
+                        "CS111","CS112","CS131","CS132","CS210","CS237","CS320","CS330","CS365","CS392","CS411"];
+            function createPost(){
+                let postTitle = document.getElementById("title").value;
+                let postContent = document.getElementById("content").value;
+                let oldContent = document.getElementById("posts-box").innerHTML;
+                document.getElementById("posts-box").innerHTML = `
+                    <div class="post">
+                        <h2 id="post-title">${postTitle}</h2>
+                        <p>${postContent}</p>
+                    </div>
+                    ${oldContent}
+                `;
+                document.getElementById("draft-box").style.zIndex = "-1";
+                document.getElementById("posts-box").style.filter = "blur(0px)";
+            }
+
+            function draftPost(){
+                document.getElementById("draft-box").style.zIndex = "1";
+                document.getElementById("posts-box").style.filter = "blur(3px)";
+            }
+        </script>  -->
     </body>
 </html>
