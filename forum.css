@@ -36,7 +36,7 @@ header{
 /* nav area */
 nav{
     background-color: rgb(160, 26, 26);
-    padding: 10px;
+    padding: 2vh 0 1vh 0;
 }
 
 nav ul{
@@ -117,6 +117,20 @@ body{
     flex-direction: column;
 }
 
+#logout-box{
+    position: absolute;
+    border: solid 4px rgb(160, 26, 26);
+    background-color: white;
+    padding: 2vh 2vw;
+    z-index: -1;
+    left: 30%;
+    right: 30%;
+    text-align: center;
+    color:rgb(160, 26, 26);
+    font-size: calc(10px + 1vw);
+    margin: 1vh 0;
+}
+
 
 #logout-box button{
     padding: 0 10px;
@@ -134,7 +148,7 @@ body{
     transition: 0.3s;
 }
 
-#draft-box, #logout-box{
+#draft-box{
     position: absolute;
     border: solid 4px rgb(160, 26, 26);
     background-color: white;
@@ -164,7 +178,28 @@ body{
     transition: 0.3s;
 }
 
-/* make these two scale */
+#tagsautocomplete-list{
+    position: absolute;
+    border: solid 4px rgb(160, 26, 26);
+    background-color: white;
+    padding: 1vh 1vw;
+    z-index: -1;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    color:rgb(160, 26, 26);
+    font-size: calc(10px + 1vw);
+    margin: 3vh 20vw;
+}
+
+#tagsautocomplete-list div{
+    border: solid 2px rgb(238, 238, 238);
+    border-radius: 30px;
+    background-color:rgb(238, 238, 238);
+    margin: 1vh 30%;
+    font-size: calc(5px + 1vw);
+}
+
 #title, #content, #tags{
     height: 5vh;
     width: 70vw;
@@ -184,18 +219,37 @@ body{
 
 .post{
     margin: 5vh 5vw;
-    padding: 1vh 1vw;
-    border: solid 2px rgb(160, 26, 26);
+    padding: 2vh 2vw;
+    border: solid 2px rgb(238, 238, 238);
+    border-radius: 30px;
+    background-color:rgb(238, 238, 238);
 }
 
-.post #post-title{
+.post #post-title,h2{
     font-size: calc(10px + 1vw);
     margin-bottom: 1vh;
 }
 
 .post p,li{
-    font-size: calc(8px + 1vw);
+    font-size: calc(10px + 1vw);
     list-style: none;
+    margin-bottom: 1vh;
+}
+
+.post button{
+    padding: 0 10px;
+    margin: 0 5px 10px 5px;
+    border: solid 1px rgb(160, 26, 26);
+    border-radius: 40px;
+    background-color: #ffffff;
+    color: rgb(160, 26, 26);
+    font-size: calc(7px + 1vw);
+}
+
+.post button:hover{
+    background-color: rgb(160, 26, 26);
+    color: white;
+    transition: 0.3s;
 }
 
 .tags{
@@ -210,12 +264,33 @@ body{
     border: none;
     background-color:rgb(160, 26, 26, 0.5);
     margin: 0 1vw 0 0;
+    color: black;
 }
 
 .tags button:hover{
     color: white;
     transition: 0.3s;
 }
+
+.post input{
+    padding: 1px;
+    font-size: calc(7px + 1vw);
+    border: solid 1px rgb(160, 26, 26);
+    margin-right: 0px;
+}
+
+/* about us page  */
+#container{
+    padding: 10vh 2vw;
+    background-color: white;
+}
+
+#container h3{
+    color:rgb(160, 26, 26);
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
 /* footer area  */
 footer{
     background-color:rgb(160, 26, 26);
