@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // log out confirmation redirects the user to the home page after logging out
     const signOutButton = document.getElementById("logout-btn");
     signOutButton.addEventListener("click", function (event) {
-        window.location.href = "home.html";
+        window.location.href = "index.html";
     });
   });

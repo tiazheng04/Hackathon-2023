@@ -308,5 +308,7 @@ body{
 footer{
     background-color:rgb(160, 26, 26);
     color: white;
+    display: flex;
+    justify-content: center;
     padding: 2vh;
 }
