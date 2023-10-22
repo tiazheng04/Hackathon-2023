@@ -3,15 +3,21 @@
   var popupLink = document.getElementById("sign-in");
   var popupWindow = document.getElementById("sign-in-window");
   var closeButton = document.getElementById("close-button");
+  var backgroundImg = document.getElementById("background");
   // Show the pop-up window when the link is clicked
   popupLink.addEventListener("click", function(event) {
     event.preventDefault();
     popupWindow.style.display = "block";
     anotherWindow.style.display = "none";
+    backgroundImg.style.filter = "blur(20px)";
+    
   });
   // Hide the pop-up window when the close button is clicked
   closeButton.addEventListener("click", function() {
     popupWindow.style.display = "none";
+    if((anotherWindow.style.display = "none") && (popupWindow.style.display = "none")){
+      backgroundImg.style.filter = "blur(0px)";
+    }
   });
 
   var anotherPop = document.getElementById("sign-up");
@@ -22,10 +28,14 @@
     event.preventDefault();
     anotherWindow.style.display = "block";
     popupWindow.style.display = "none";
+    backgroundImg.style.filter = "blur(20px)";
   });
   // Hide the pop-up window when the close button is clicked
   closeButton2.addEventListener("click", function() {
     anotherWindow.style.display = "none";
+    if((anotherWindow.style.display = "none") && (popupWindow.style.display = "none")){
+      backgroundImg.style.filter = "blur(0px)";
+    }
   });
 
   

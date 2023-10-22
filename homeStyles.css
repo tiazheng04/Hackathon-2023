@@ -5,57 +5,75 @@ body{
 }
 
 .page-wrapper{
-    height: 130vh;
-    background-color: orange;
-}
-
-.page{
-    display: flex;
     height: 100vh;
+    background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: black;
+    justify-content: space-evenly;
 }
+
 
 .background-img{
     background-image: url(hackathon-bu.jpg);
     background-size: cover;
-    height: 80vh;
+    height: 70vh;
 }
 
 .sign-in-box{
-    background-color: red;
+    background-color: white;
     height: 10vh;
-    width: 30vw;
+    width: 20vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-right: 5vw;
+    margin-right: 3vw;
 }
 
 #sign-in{
-    background-color: blue;
     padding: 1vh 2vw;
 }
 
+#sign-in:hover{
+color: gray;
+text-decoration: underline;
+transform: scale(1.1);
+box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.9);
+}
+
 #sign-up{
-  background-color: orange;
   padding: 1vh 2vw;
 }
 
+#sign-up:hover{
+  color: gray;
+  transform: scale(1.1);
+  text-decoration: underline;
+  box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.9);
+  }
+
 .footer{
-    background-color: red;
+    background-color: black;
     height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: large;
+}
+
+.box{
+  border: solid white 1px;
+  padding: 2vh;
+  margin: 2vh 0;
 }
 
 #sign-in-window {
     position: fixed;
-    width: 60vw;
+    width: 55vw;
     height: 50vh;
     background: white;
     border: 1px solid black;
-    padding: 3vh;
+    padding: 3vh 8vh 8vh;
     margin: auto;
     top: 0;
     right: 0;
@@ -67,11 +85,11 @@ body{
 
   #sign-up-window {
     position: fixed;
-    width: 60vw;
+    width: 55vw;
     height: 50vh;
     background: white;
     border: 1px solid black;
-    padding: 3vh;
+    padding: 3vh 8vh 8vh;
     margin: auto;
     top: 0;
     right: 0;
@@ -83,7 +101,9 @@ body{
 
   .form-container{
     height: auto;
-    background-color: orange;
+    width: 50vw;
+    background-color: #f0ebe3;
+    border: solid 1px black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -128,7 +148,6 @@ body{
   }
 
   .container{
-    background-color: green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -136,13 +155,15 @@ body{
   }
 
   .title{
-    background-color: yellow;
     margin-left: 3vw;
+    color: white;
 
   }
 
   .description{
     margin-left: 3vw;
+    padding-left: 2vw;
+    background-color: white;
   }
 
   /* span{
