@@ -20,7 +20,7 @@ body{
 }
 
 .sign-in-box{
-  background-color: white;
+  /* background-color: white; */
   height: 10vh;
   width: 20vw;
   display: flex;
@@ -70,7 +70,7 @@ margin: 2vh 0;
 #sign-in-window {
   position: fixed;
   width: 55vw;
-  height: 50vh;
+  height: 55vh;
   background: white;
   border: 1px solid black;
   padding: 3vh 8vh 8vh;
@@ -196,4 +196,12 @@ input[type=text], input[type=password] {
   margin-left: 3vw;
   padding-left: 2vw;
   background-color: white;
+}
+
+#wrong-credential{
+  margin-top: 3vh;
+  font-size: 1.25vw;
+  color: rgb(255, 24, 24);
+  display: none;
+
 }
