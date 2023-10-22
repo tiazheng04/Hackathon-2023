@@ -20,6 +20,7 @@ function handleSearchPosts(keyword) {
       }
     });
 
+    //creates a post box within the snapshot
     itemsContainer.innerHTML = "";
     resultsList.forEach((result) => {
       const postDiv = document.createElement("div");
@@ -33,7 +34,8 @@ function handleSearchPosts(keyword) {
   });
 }
 
-let searchBtn = document.getElementById("search-btn");
+//adds a listener to the go button
+const searchBtn = document.getElementById("search-btn");
 searchBtn.addEventListener("click", function (event) {
   handleSearchPosts(document.getElementById("search-txt").value);
 });
