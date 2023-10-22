@@ -281,7 +281,7 @@ body{
 
 /* about us page  */
 #container{
-    padding: 10vh 2vw;
+    padding: 10vh 2vw 20vh 2vw;
     background-color: white;
 }
 
@@ -289,6 +289,11 @@ body{
     color:rgb(160, 26, 26);
     margin-top: 2vh;
     margin-bottom: 1vh;
+    font-size: calc(10px + 3vh);
+}
+
+#container p{
+    font-size: calc(6px + 3vh);
 }
 
 /* footer area  */

@@ -36,12 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //brings up the log out popup
   function handleLogOutPopup() {
+    console.log("okk");
     document.getElementById("logout-box").style.zIndex = "1";
     document.getElementById("posts-box").style.filter = "blur(3px)";
   }
 
   //redirects the user to the home page after logging out
   function handleLogOut() {
+    console.log("yas");
     window.location.href = "home.html";
   }
 
@@ -93,11 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
     handleSearchPosts(document.getElementById("search-txt").value);
   });
 
+  // log out popup
   const logOutButton = document.getElementById("log-out-btn");
   logOutButton.addEventListener("click", function (event) {
+    console.log("slay");
     handleLogOutPopup(logOutButton);
   });
 
+  // log out confirmation
   const signOutButton = document.getElementById("logout-btn");
   signOutButton.addEventListener("click", function (event) {
     handleLogOut(signOutButton);
