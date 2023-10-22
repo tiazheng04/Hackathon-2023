@@ -3,16 +3,22 @@
  var popupWindow = document.getElementById("sign-in-window");
  var closeButton = document.getElementById("close-button");
  var backgroundImg = document.getElementById("background");
+ var signUpSuccess = document.getElementById("signup-success");
+ var signUpFailure = document.getElementById("signup-fail");
+ var retry = document.getElementById("retry-signup");
  // Show the pop-up window when the link is clicked
  popupLink.addEventListener("click", function(event) {
    event.preventDefault();
    popupWindow.style.display = "block";
    anotherWindow.style.display = "none";
    backgroundImg.style.filter = "blur(20px)";
+   signUpSuccess.style.display = "none";
+   signUpFailure.style.display = "none";
    
  });
  // Hide the pop-up window when the close button is clicked
- closeButton.addEventListener("click", function() {
+ closeButton.addEventListener("click", function(event) {
+  event.preventDefault();
    popupWindow.style.display = "none";
    if((anotherWindow.style.display = "none") && (popupWindow.style.display = "none")){
      backgroundImg.style.filter = "blur(0px)";
@@ -28,14 +34,26 @@
    anotherWindow.style.display = "block";
    popupWindow.style.display = "none";
    backgroundImg.style.filter = "blur(20px)";
+   signUpSuccess.style.display = "none";
+   signUpFailure.style.display = "none";
  });
  // Hide the pop-up window when the close button is clicked
- closeButton2.addEventListener("click", function() {
+ closeButton2.addEventListener("click", function(event) {
+  event.preventDefault();
    anotherWindow.style.display = "none";
    if((anotherWindow.style.display = "none") && (popupWindow.style.display = "none")){
      backgroundImg.style.filter = "blur(0px)";
    }
  });
+
+ retry.addEventListener("click", function(event){
+  event.preventDefault();
+  anotherWindow.style.display = "block";
+  signUpFailure.style.display = "none";
+
+ }
+ 
+ )
 
  let loginBtn = document.getElementById("login");
 
@@ -48,6 +66,22 @@ loginBtn.onclick = (event) => {
         window.location.href = "forum.html";
     }
 };
+
+let SignUpBtn = document.getElementById("signup");
+
+SignUpBtn.onclick = (event) => {
+  event.preventDefault();
+  let userEmailSignUp = document.getElementById("userSignup").value;
+
+  if(userEmailSignUp.includes("bu.edu")) {
+    signUpSuccess.style.display = "block";
+
+  } else {
+    signUpFailure.style.display = "block";
+    console.log("failed")
+
+  }
+}
 
   
 

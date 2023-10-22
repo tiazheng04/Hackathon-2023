@@ -99,6 +99,38 @@ margin: 2vh 0;
   display: none;
 } 
 
+#signup-success {
+  position: fixed;
+  width: 55vw;
+  height: 50vh;
+  background: white;
+  border: 1px solid black;
+  padding: 3vh 8vh 8vh;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+} 
+
+#signup-fail {
+  position: fixed;
+  width: 55vw;
+  height: 50vh;
+  background: white;
+  border: 1px solid black;
+  padding: 3vh 8vh 8vh;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+} 
+
 .form-container{
   height: auto;
   width: 50vw;
