@@ -88,8 +88,8 @@ onValue(itemsRef, (snapshot) => {
 // add item to database
 submitBtn.onclick = (event) => {
   event.preventDefault();
-  if (userInputTitle.value == "" || userInputText.valu == "") {
-      alert("Please write in both text boxes");
+  if (userInputTitle.value == "" || userInputText.value == "") {
+    alert("Please write in both text boxes");
   } else {
     let userInputValueTitle = userInputTitle.value;
     userInputTitle.value = "";
