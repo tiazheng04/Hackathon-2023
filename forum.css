@@ -36,7 +36,7 @@ header{
 /* nav area */
 nav{
     background-color: rgb(160, 26, 26);
-    padding: 10px;
+    padding: 2vh 0 1vh 0;
 }
 
 nav ul{
@@ -225,14 +225,31 @@ body{
     background-color:rgb(238, 238, 238);
 }
 
-.post #post-title{
+.post #post-title,h2{
     font-size: calc(10px + 1vw);
     margin-bottom: 1vh;
 }
 
 .post p,li{
-    font-size: calc(8px + 1vw);
+    font-size: calc(10px + 1vw);
     list-style: none;
+    margin-bottom: 1vh;
+}
+
+.post button{
+    padding: 0 10px;
+    margin: 0 5px 10px 5px;
+    border: solid 1px rgb(160, 26, 26);
+    border-radius: 40px;
+    background-color: #ffffff;
+    color: rgb(160, 26, 26);
+    font-size: calc(7px + 1vw);
+}
+
+.post button:hover{
+    background-color: rgb(160, 26, 26);
+    color: white;
+    transition: 0.3s;
 }
 
 .tags{
@@ -247,11 +264,19 @@ body{
     border: none;
     background-color:rgb(160, 26, 26, 0.5);
     margin: 0 1vw 0 0;
+    color: black;
 }
 
 .tags button:hover{
     color: white;
     transition: 0.3s;
+}
+
+.post input{
+    padding: 1px;
+    font-size: calc(7px + 1vw);
+    border: solid 1px rgb(160, 26, 26);
+    margin-right: 0px;
 }
 
 /* about us page  */
@@ -265,6 +290,7 @@ body{
     margin-top: 2vh;
     margin-bottom: 1vh;
 }
+
 /* footer area  */
 footer{
     background-color:rgb(160, 26, 26);

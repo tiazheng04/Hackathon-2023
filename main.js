@@ -88,19 +88,23 @@ onValue(itemsRef, (snapshot) => {
 // add item to database
 submitBtn.onclick = (event) => {
   event.preventDefault();
-  let userInputValueTitle = userInputTitle.value;
-  userInputTitle.value = "";
-  let userInputValueText = userInputText.value;
-  userInputText.value = "";
+  if (userInputTitle.value == "" || userInputText.valu == "") {
+      alert("Please write in both text boxes");
+  } else {
+    let userInputValueTitle = userInputTitle.value;
+    userInputTitle.value = "";
+    let userInputValueText = userInputText.value;
+    userInputText.value = "";
 
-  // Create an object to store both title and text
-  const newItemData = {
-    title: userInputValueTitle,
-    text: userInputValueText,
-  };
+    // Create an object to store both title and text
+    const newItemData = {
+      title: userInputValueTitle,
+      text: userInputValueText,
+    };
 
-  // Generate a new child reference under "items" and set the object as its value
-  push(itemsRef, newItemData);
+    // Generate a new child reference under "items" and set the object as its value
+    push(itemsRef, newItemData);
+  }
 };
 
 
