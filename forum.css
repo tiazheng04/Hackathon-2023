@@ -42,6 +42,10 @@ header{
     z-index: 1;
 }
 
+.main{
+    margin-top: 20vh;
+}
+
 /* nav area */
 nav{
     background-color: rgb(160, 26, 26);
