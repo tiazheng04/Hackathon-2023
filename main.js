@@ -19,8 +19,9 @@ function displayItemsReversed(data) {
       let item = data[key];
 
       let newDiv = document.createElement("div");
+      newDiv.className = "post";  
       newDiv.innerHTML = `
-        <h1>${item.title}</h1>
+        <h2 id="post-title">${item.title}</h2>
         <p>${item.text}</p>
         <input type="text" id="commentInput${key}" placeholder="Add Comment">
         <button id="commentBtn${key}">Submit Comment</button>
