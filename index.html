@@ -7,17 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="page-wrapper">
+    <!-- page wrapper -->
+    <div class="page-wrapper"> 
+        <!-- container for top -->
     <div class ="container">
     <header class="header">
-        <h1 class="title">BU's Social Forum</h1>
+        <!-- title -->
+        <h1 class="title">Together Terriers</h1>
+        <!-- describe website -->
         <p class="description">This <span class="description-span"></span></p>
     </header>
+    <!-- container for signin/up buttons -->
     <div class="sign-in-box">
         <button type= "button" id="sign-in" href="#">Login</button>
         <button type="button" id="sign-up" href="#">Sign up</button>
     </div>
     </div>
+    <!-- popup for signing in -->
             <div id="sign-in-window">
                 <h1>Login with BU Credentials</h1>
                 <form action="">
@@ -27,10 +33,13 @@
                         <label for="pword"><b>Password</b></label>
                         <input type="text" name="pword" placeholder="Enter Password">
                         <button type="submit" id="login" href="#">Login</button>
+                        <p id="wrong-credential">Invalid Email or Password</p>
                     </div>
                 </form>
+                <!-- close popup for signing in -->
                 <button id="close-button">x</button>
               </div>  
+              <!-- popup for signing up -->
               <div id="sign-up-window">
                 <h1>Sign up BU Credentials</h1>
                 <form action="">
@@ -42,20 +51,23 @@
                         <button type="submit" id="signup" href="#">Sign up</button>
                     </div>
                 </form>
+                <!-- close popup for signing up -->
                 <button id="close-button2">x</button>
               </div>  
+              <!-- display if valid sign up -->
               <div id="signup-success">
                 <h1>Welcome to Together Terriors!</h1>
                 <p>You have successfully created you account. Please login to access the community forum.</p>
                 <img src="bu-mascot.jpg" alt="">
               </div>
+              <!-- display if invalid signup -->
               <div id="signup-fail">
                 <h1>Sign Up Failed</h1>
                 <p>This forum is only accessible to BU students. Please sign up with your BU email for authentication purposes.</p>
                 <button type="submit" id="retry-signup" href="#">Try again</button>
               </div>
 
-    
+              <!-- backgorund img -->
         <div class="page">
             <div class="background-img" id="background"></div>
 
@@ -67,10 +79,12 @@
         </footer>
     </div>
 
+    <!-- script links -->
     <script src="homeJS.js"></script>
     <script src="main.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
+        //js library used to creat text animation
         var typed = new Typed(".description-span", {
             strings: ["is a BU social forum in progress", "is a demo of our project"],
             typeSpeed: 50, 
