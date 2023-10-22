@@ -2,13 +2,20 @@
  var popupLink = document.getElementById("sign-in");
  var popupWindow = document.getElementById("sign-in-window");
  var closeButton = document.getElementById("close-button");
+ var anotherPop = document.getElementById("sign-up");
+ var anotherWindow = document.getElementById("sign-up-window");
+ var closeButton2 = document.getElementById("close-button2");
  var backgroundImg = document.getElementById("background");
  var signUpSuccess = document.getElementById("signup-success");
  var signUpFailure = document.getElementById("signup-fail");
  var retry = document.getElementById("retry-signup");
- // Show the pop-up window when the link is clicked
+ var credentials = document.getElementById("wrong-credential");
+
+
+ // Show the pop-up signin window when sign in button in the upper right corner is clicked. Blurs the background and sets all other popup displays to none.
  popupLink.addEventListener("click", function(event) {
    event.preventDefault();
+   //prevent page from doing refresh
    popupWindow.style.display = "block";
    anotherWindow.style.display = "none";
    backgroundImg.style.filter = "blur(20px)";
@@ -16,7 +23,9 @@
    signUpFailure.style.display = "none";
    
  });
- // Hide the pop-up window when the close button is clicked
+
+
+ // Close the pop-up signin window when the x-out button is clicked
  closeButton.addEventListener("click", function(event) {
   event.preventDefault();
    popupWindow.style.display = "none";
@@ -25,10 +34,7 @@
    }
  });
 
- var anotherPop = document.getElementById("sign-up");
- var anotherWindow = document.getElementById("sign-up-window");
- var closeButton2 = document.getElementById("close-button2");
- // Show the pop-up window when the link is clicked
+ // Show the pop-up signin window when sign up button in the upper right corner is clicked. Blurs the background and sets all other popup displays to none.
  anotherPop.addEventListener("click", function(event) {
    event.preventDefault();
    anotherWindow.style.display = "block";
@@ -37,7 +43,7 @@
    signUpSuccess.style.display = "none";
    signUpFailure.style.display = "none";
  });
- // Hide the pop-up window when the close button is clicked
+ // Close the pop-up signup window when the x-out button is clicked
  closeButton2.addEventListener("click", function(event) {
   event.preventDefault();
    anotherWindow.style.display = "none";
@@ -46,6 +52,7 @@
    }
  });
 
+ //click to redirect to singnup window by displaying the pop-up sign up to block, and displaying failure message to none
  retry.addEventListener("click", function(event){
   event.preventDefault();
   anotherWindow.style.display = "block";
@@ -54,9 +61,10 @@
  }
  
  )
-
+//declare variable for login
  let loginBtn = document.getElementById("login");
 
+ //click the login button and if the user email input contains bu.edu, then redirect user to forum.html, else show invalid dredential message
 loginBtn.onclick = (event) => {
     event.preventDefault();
     let userEmailInput = document.getElementById("userEmail").value; // Use .value to get the input value
@@ -64,11 +72,16 @@ loginBtn.onclick = (event) => {
 
     if (userEmailInput.includes("bu.edu")) {
         window.location.href = "forum.html";
+    } else {
+      credentials.style.display = "block";
     }
 };
 
+
+//declare variable for signup
 let SignUpBtn = document.getElementById("signup");
 
+//click the signup button and if the user email input contains bu.edu, then display account creates success message, else display failure message
 SignUpBtn.onclick = (event) => {
   event.preventDefault();
   let userEmailSignUp = document.getElementById("userSignup").value;
@@ -82,42 +95,5 @@ SignUpBtn.onclick = (event) => {
 
   }
 }
-
-  
-
-
-  // if (popupWindow.style.display =="block"){
-  //   anotherWindow.style.display == "none";
-  // }
-
-  // if(anotherWindow.style.display =="block"){
-  //   popupWindow.style.display== "none";
-  // }
-
-//   var text = document.querySelector(".description");
-//   var strText = text.textContent;
-//   var splitText = strText.split("");
-
-//   for(let i = 0; i < splitText.length; i++) {
-//     text.innerHTML += "<span>" + splitText[i] + "</span>";
-//   }
-
-//   letchar = 0;
-//   let timer = setInterval(onTick, 50);
-
-//   function onTick() {
-//     var span = text.querySelectorAll('span')[char];
-//     span.classList.add('fade');
-//     char++
-//     if (char === splitText.length){
-//         complete();
-//         return;
-//     }
-//   }
-
-//   function complete(){
-//     clearInterval(timer);
-//     timer = null;
-//   }
 
   

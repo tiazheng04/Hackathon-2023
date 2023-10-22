@@ -33,6 +33,15 @@ header{
     transition: 0.3s;
 }
 
+/* freeze the header*/
+#freeze{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 /* nav area */
 nav{
     background-color: rgb(160, 26, 26);
@@ -311,4 +320,8 @@ footer{
     display: flex;
     justify-content: center;
     padding: 2vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

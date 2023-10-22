@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //connects this js file to the firebase database
-  //firebaseOperation();
-
   //handler for cancelling a post by clearing the previous text
   function handleCancelClick(buttonName) {
     document.getElementById("title").value = "";
@@ -24,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const oldContent = document.getElementById("posts-box").innerHTML;
     if (postTitle != "" && postContent != "") {
       console.log("test");
-    } 
+    }
     handleCancelClick("post-btn");
   }
 
@@ -36,22 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //brings up the log out popup
   function handleLogOutPopup() {
-    console.log("okk");
     document.getElementById("logout-box").style.zIndex = "1";
     document.getElementById("posts-box").style.filter = "blur(3px)";
   }
 
   //redirects the user to the home page after logging out
   function handleLogOut() {
-    console.log("yas");
     window.location.href = "index.html";
   }
 
   //adds listeners to the buttons
-  const searchBtn = document.getElementById("search-btn");
-  searchBtn.addEventListener("click", function (event) {
-    handleSearchPosts(document.getElementById("search-txt").value);
-  });
 
   const cancelButton = document.getElementById("cancel-btn");
   cancelButton.addEventListener("click", function (event) {
@@ -73,15 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
     handleDraftClick(draftButton);
   });
 
-  const searchButton = document.getElementById("search-btn");
-  searchButton.addEventListener("click", function (event) {
-    handleSearchPosts(document.getElementById("search-txt").value);
-  });
-
   // log out popup
   const logOutButton = document.getElementById("log-out-btn");
   logOutButton.addEventListener("click", function (event) {
-    console.log("slay");
     handleLogOutPopup(logOutButton);
   });
 
