@@ -7,8 +7,7 @@ import {
   onValue,  // reads data from our database
 } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
 
-// Your web app's Firebase configuration
-// ENTER FIREBASE CONFIG HERE
+// Firebase Configs
 const firebaseConfig = {
   apiKey: "AIzaSyBYp6obxnscqK8E4DD-ACfnedT4O1INqCs",
   authDomain: "hackhardwarebu-8159b.firebaseapp.com",
