@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //redirects the user to the home page after logging out
   function handleLogOut() {
     console.log("yas");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
   }
 
   //adds listeners to the buttons
