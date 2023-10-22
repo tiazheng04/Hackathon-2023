@@ -1,5 +1,4 @@
 let loginBtn = document.getElementById("login");
-let displayForum = false;
 
 loginBtn.onclick = (event) => {
     event.preventDefault();
