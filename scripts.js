@@ -47,27 +47,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //handles search functionality using the firebase
   //edit this later depending on what's in the firebase and how things are organized
-  // function handleSearchPosts(keyword) {
-  //   var postsRef = firebase.database().ref("posts");
+  function handleSearchPosts(keyword) {
+    const postsRef = firebase.database().ref("posts");
 
-  // postsRef
-  //   .orderByChild("title")
-  //   .equalTo(keyword)
-  //   .once("value")
-  //   .then(function (snapshot) {
-  //     // Handle search results
-  //     snapshot.forEach(function (childSnapshot) {
-  //       var postData = childSnapshot.val();
-  //       console.log("Title: " + postData.title);
-  //       console.log("Content: " + postData.content);
-  //     });
-  //   })
-  //   .catch(function (error) {
-  //     console.error("Error searching posts: " + error);
-  //   });
-  //}
+    postsRef
+      // .orderByChild("tags")
+      // .equalTo(keyword.toLowerCase()) // Assuming tags are stored in lowercase
+      // .once("value")
+      .then(function (snapshot) {
+        document.getElementById("posts-box").innerHTML = ""; // Clear existing posts
+        snapshot.forEach(function (childSnapshot) {
+          const postData = childSnapshot.val();
+          const postTitle = postData.title;
+          const postContent = postData.content;
+
+          // Display the matching posts
+          const postDiv = document.createElement("div");
+          postDiv.className = "post";
+          postDiv.innerHTML = `
+            <h2 id="post-title">${postTitle}</h2>
+            <p>${postContent}</p>
+          `;
+          document.getElementById("posts-box").appendChild(postDiv);
+        });
+      });
+  }
 
   //adds listeners to the buttons
+  const searchBtn = document.getElementById("search-btn");
+  searchBtn.addEventListener("click", function (event) {
+    handleSearchPosts(document.getElementById("search-txt").value);
+  });
+
   const cancelButton = document.getElementById("cancel-btn");
   cancelButton.addEventListener("click", function (event) {
     handleCancelClick(cancelButton);
